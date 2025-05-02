@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML5</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="encabezado">
+		<div class="image-container">
+			<img src="../imagenes/logo.jpg" alt="Logo del sitio" class="logo">
+		</div>
+		<h1>Mi landing page</h1>
+	</div>
+	<div class="contenedor">
+		<header>
+			
+			<nav>
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#seccion1">Certificaciones</a></li>
+					<li><a href="#acerca-de">Habilidades blandas</a></li>
+					<li><a href="#seccion2">Contacteme</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="texto-verde" id="inicio">
+				<h2 class = "titulo-azul">Bienvenido</h2>
+				<p>Esta es una página básica donde se detalla un poco sobre mi y mis habilidades</p>
+			</section>
+
+			<section class="texto-verde" id="seccion1">
+				<h2 class = "titulo-azul">Certificaciones</h2>
+				<p>A continuación se detallan certificaciones relevantes</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Campo Relacionado</th>
+							<th>Nivel de certificación</th>
+							<th>Certificado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Azure Cloud</td>
+							<td>Intermedio</td>
+							<td>Azure Cloud Administrator 104</td>
+						</tr>
+						<tr>
+							<td>Python</td>
+							<td>Básico</td>
+							<td>Python 4 Everybody</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+
+			<section class="texto-verde" id="acerca-de">
+				<h2 class = "titulo-azul">Acerca de</h2>
+				<p>Tecnologías que manejo</p>
+				<ul>
+					<li>Docker</li>
+					<li>Linux</li>
+					<li>Vim :D</li>
+				</ul>
+			</section>
+
+			<section class="texto-verde" id="seccion2">
+				<h2 class = "titulo-azul">Sección 2</h2>
+				<p>Contenido de la Sección 2</p>
+				<form action="procesar.php" method="post">
+					<label for="nombre">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" required>
+
+					<label for="email">Correo electrónico:</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="mensaje">Mensaje:</label>
+					<textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea>
+
+					<button type="submit">Enviar</button>
+				</form>
+			</section>
+		</main>
+	</div>
+    <footer>
+        <p>&copy; 2024 Mi sitio web</p>
+    </footer>
+</body>
+</html>
