@@ -1,0 +1,92 @@
+<div class="container py-5">
+  <!-- String interpolation - Titulo y subtitulo -->
+  <div class="text-center mb-5">
+    <h1>{{ companyName }}</h1>
+    <p class="lead">{{ tagline }}</p>
+  </div>
+
+  <div class="row">
+    <!-- Panel izquierdo - Formulario simple -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow h-100">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0">Contáctanos</h3>
+        </div>
+        <div class="card-body">
+          <!-- Formulario simplificado -->
+          <form (ngSubmit)="onSubmit()" #formElement="ngForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre:</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="formData.name" 
+                required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico:</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                [(ngModel)]="formData.email" 
+                required>
+            </div>
+            
+            <div class="mb-4">
+              <label for="message" class="form-label">Mensaje:</label>
+              <textarea 
+                class="form-control" 
+                id="message" 
+                name="message" 
+                rows="4" 
+                [(ngModel)]="formData.message" 
+                required></textarea>
+            </div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Panel derecho - Mecanismos de contacto usando *ngFor -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow h-100">
+        <div class="card-header bg-success text-white">
+          <h3 class="mb-0">Mecanismos de Contacto</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Ofrecemos varias formas para que te comuniques con nosotros:</p>
+          
+          <!-- Ejemplo de *ngFor para mostrar mecanismos -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex align-items-center" 
+                *ngFor="let mecanismo of mecanismos; let i = index">
+              <span class="badge bg-primary rounded-pill me-3">{{ i + 1 }}</span>
+              <span>{{ mecanismo }}</span>
+            </li>
+          </ul>
+          
+          <div class="alert alert-info mt-4">
+            <h5 class="alert-heading">¿Necesitas ayuda inmediata?</h5>
+            <p>Llámanos al: <strong>(123) 456-7890</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de pagina con string interpolation -->
+  <div class="text-center mt-4">
+    <p>&copy; {{ currentYear }} {{ companyName }}. Todos los derechos reservados.</p>
+  </div>
+</div>

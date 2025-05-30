@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <!-- String interpolation para el titulo -->
+  <h2 class="text-center mb-4">{{ titulo }}</h2>
+  
+  <!-- Boton para cargar nuevos datos -->
+  <div class="d-flex justify-content-end mb-3">
+    <button class="btn btn-primary" (click)="cargarNuevosDatos()">
+      Cargar Nuevos Datos
+    </button>
+  </div>
+  
+  <!-- Tabla con los datos -->
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Columna 1</th>
+          <th scope="col">Columna 2</th>
+          <th scope="col">Columna 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Uso de *ngFor para iterar sobre las filas de datos -->
+        <tr *ngFor="let fila of datosTabla">
+          <th scope="row">{{ fila.id }}</th>
+          <td>{{ fila.columna1 }}</td>
+          <td>{{ fila.columna2 }}</td>
+          <td>{{ fila.columna3 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Resumen de informacion -->
+  <div class="alert alert-info mt-3">
+    <strong>Información:</strong> Tabla con {{ datosTabla.length }} filas y 3 columnas de datos.
+  </div>
+</div>
