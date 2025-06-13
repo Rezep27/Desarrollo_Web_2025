@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #8B0000; /* color primario */
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.subtitulo {
+  text-align: center;
+  font-style: italic;
+  color: #333333;
+  margin-top: 0.5rem;
+}
+

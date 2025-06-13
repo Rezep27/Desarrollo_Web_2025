@@ -1,0 +1,5 @@
+.carousel-container-custom{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
