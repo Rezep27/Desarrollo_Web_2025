@@ -1,0 +1,51 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../bootstrap-5.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <input type="text" id="tempValue" placeholder="Ingresa valor en Celsius">
+    <div class="card-body main-contenedor">
+      <h5 id="tituloCarta" class="card-title">Temperatura</h5>
+      <p class="card-text" id="textoCarta">Aqui se puede apreciar la temperatura en </p>
+      <div id = "buttonContainer">
+      <button onclick="leerValor()">Leer valor</button>    
+      <button onclick="convertirValor()">Convertir</button>    
+      </div>
+    </div>
+    <script src="../bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    let tempValue;
+    let estado = "Celsius";
+    function leerValor(){
+      tempValue = document.getElementById("tempValue").value;
+      estado = "Celsius";
+      document.getElementById("tituloCarta").innerText = "Temperatura Celsius";
+      document.getElementById("textoCarta").innerText = "La temperatura en Celsius es " + tempValue 
+      console.log("Temperatura registrada " , tempValue);
+    }
+
+    function convertirValor(){
+
+      if (estado == "Celsius"){
+        tempValue = (parseFloat(tempValue) * 9 / 5) + 32;
+        estado = "Fahrenheit";
+      }
+      else{
+        tempValue = (parseFloat(tempValue) - 32) * 5 / 9;
+        estado = "Celsius";
+      }
+      document.getElementById("tituloCarta").innerText = "Temperatura " + estado;
+      document.getElementById("textoCarta").innerText = "La temperatura en Celsius es " + tempValue 
+      console.log("Temperatura cambiada" , tempValue);
+
+    }
+
+    </script>
+  </body>
+</html>
+

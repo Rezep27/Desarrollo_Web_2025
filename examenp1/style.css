@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-contenedor{
+  height: 400px;
+  width: 300px;
+  border: 2px solid grey;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-direction: column;
+}
+
+p, h5{
+  text-align: center;
+}
+
+#tempValue{
+  margin: 40px 0px;
+}
+
+button {
+  widht: 30px;
+  height: 30px;
+  color: white;
+  background-color: #2337C6;
+  border-radius: 2px solid #2337C6;
+}
+
+#buttonContainer{
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
